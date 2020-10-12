@@ -15,7 +15,7 @@ jobs:
       run: |-
         while read line; do
           echo "Retrieving and updating $line"
-          curl "http://biddulph.org.uk/$line" > "line"
+          curl "http://biddulph.org.uk/$line" > $line
         done < files
     - name: Commit and push if it changed
       run: |-
